@@ -38,21 +38,21 @@ Additional dependencies will be loaded from `gemfile` and `package.json` referen
 ***
 
 ### Branch structure
-Primary project should exist in the `master` directory for all projects and should include a readme and license file defining the information about the project.
+The primary active version of a project should exist in the `master` directory and should include a readme and license file defining the information about the project.
 
-For web projects the `gh-pages` directory can be used for nightly build updates. However, testing of changes and revisions should be done locally not in `gh-pages`.
+For web projects the `gh-pages` directory can be used for nightly build updates. However, testing of changes and revisions __should be done locally not__ in `gh-pages`.
 
 #### Branch names
 When developing new features or addressing existing issues, a new branch should be created. This branch should be named `test/[your-name]` or `test/[your-name]-[issue-identifier]`. 
 
 _Branches should be deleted when changes are merged to their parent by the project manager._
 
-If the project is moving to a new version, a new branch should be created from the `master` and named `[version #]`. **Only the project manager should commit a new version in order to prevent issue conflicts.**
+If the project is moving to a new version, a branch should be created from the existing `master` and named `archive/version-[version #]`. **Only the project manager should create a new version in order to prevent issue and build conflicts.**
 
 #### Project directory structure
 Directory structure should be standard across all final web products. The following is a standard web structure:
 
-{% highlight text %}
+```text
 --html
     |--lib/
     |   |--images/
@@ -67,8 +67,7 @@ Directory structure should be standard across all final web products. The follow
     |--license.md
     |--readme.md
     |--index.htm
-
-{% endhighlight %}
+```
 
 ***
 
